@@ -67,7 +67,6 @@ nav a.active{
 @media(max-width:995px){
     nav{
         position: absolute;
-        display: none;
         top: 0;
         right: 0;
         width: 40%;
@@ -957,5 +956,47 @@ footer{
 
 .footer-
 
+/* Hamburger button */
+.menu-btn {
+    display: none; /* default tidak muncul di desktop */
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive untuk HP */
+@media(max-width: 995px){
+    nav {
+        position: absolute;
+        top: 50%;       
+        right: 0;
+        width: 40%;          /* sebelumnya 60% → lebih kecil */
+        background-color: #161616;
+        display: none;       
+        flex-direction: column;
+        padding: 0.5rem 0.5rem;  /* kecilkan padding */
+        border-left: 2px solid #b74b4b;  /* lebih tipis */
+        border-bottom-left-radius: 1rem; /* lebih kecil */
+        gap: 0.5rem;         /* jarak antar item lebih rapat */
+        z-index: 99;
+    }
+}
+
+
+    nav.active {
+        display: flex; /* muncul saat tombol diklik */
+    }
+
+    nav a {
+        display: block;
+        margin: 1rem 0;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .menu-btn {
+        display: block; /* muncul di HP */
+    }
+}
 
 
